@@ -1,0 +1,39 @@
+/* apply color change to pulse animation*/
+@keyframes backchange{
+
+  from {background: linear-gradient(to right, #efda00 0%,#038c00 10%, #6a03a7 90%, #efda00 100%)}
+  to {background: linear-gradient(to right, #efda00 0%, #6a03a7 10%, #038c00 90%, #efda00 100%)}
+
+}
+@-webkit-keyframes backchange{
+
+  from {background: linear-gradient(to right, #efda00 0%,#038c00 10%, #6a03a7 90%, #efda00 100%)}
+  to {background: linear-gradient(to right, #efda00 0%, #6a03a7 10%, #038c00 90%, #efda00 100%)}
+
+}
+
+body {
+  background-position: center;
+  /*** background-color: #6508a5; ***/
+  /* background: linear-gradient(to bottom, #000000, #efda00); */
+  background: linear-gradient(to right, #efda00 0%,#038c00 10%, #6a03a7 90%, #efda00 100%);
+  -webkit-animation: backchange 6s infinite linear;
+  animation: backchange 6s infinite linear;
+
+}
+
+@-webkit-keyframes flip {
+  from {-webkit-transform: rotateY(0deg)}
+  to {-webkit-transform: rotateY(360deg)}
+}
+
+@keyframes flip {
+  from {transform: rotateY(0deg)}
+  to {transform: rotateY(360deg)}
+}
+
+#logo {
+  animation:flip 6s infinite linear;
+  -webkit-animation: flip 6s infinite linear;
+}
+
